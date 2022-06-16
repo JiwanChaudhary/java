@@ -33,7 +33,7 @@ class ArithmeticOperation {
     }
 }
 
-class ExceptionHandling() {
+class ExceptionHandling {
     public static void main(String[] args) {
         ArithmeticOperation ao = new ArithmeticOperation();
         ao.display();
