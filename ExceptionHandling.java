@@ -11,32 +11,46 @@ class ArithmeticOperation {
         b = scn.nextInt();
     }
 
-    void addition() {
-        System.out.println("Addition is:" + (a + b));
-    }
-
-    void subtraction() {
-        System.out.println("Subtraction is:" + (a - b));
-    }
-
-    void multiplication() {
-        System.out.println("Multiplication is:" + (a * b));
-    }
-
-    void division() {
-        try {
-            System.out.println("Division is:" + (a / b));
-        } catch (Exception e) {
-            System.out.println("error" + e.getMessage());
+    class Addition {
+        void add() {
+            System.out.println("Addition is:" + (a + b));
         }
     }
 
-    public void display() {
-        ArithmeticOperation ai = new ArithmeticOperation();
-        ai.addition();
-        ai.subtraction();
-        ai.multiplication();
-        ai.division();
+    class Subtraction {
+        void subtract() {
+            System.out.println("Subtraction is:" + (a - b));
+        }
+    }
+
+    class Multiplication {
+        void multiple() {
+            System.out.println("Multiplication is:" + (a * b));
+        }
+    }
+
+    class Division {
+        void divide() {
+            try {
+                System.out.println("Division is:" + (a / b));
+            } catch (Exception e) {
+                System.out.println("Error" + e.getMessage());
+            }
+        }
+    }
+
+    public void dispayOperation() {
+        Addition ad = new Addition();
+        ad.add();
+
+        Subtraction sub = new Subtraction();
+        sub.subtract();
+
+        Multiplication mult = new Multiplication();
+        mult.multiple();
+
+        Division div = new Division();
+        div.divide();
     }
 
 }
@@ -45,6 +59,6 @@ class ExceptionHandling {
     public static void main(String[] args) {
         ArithmeticOperation ao = new ArithmeticOperation();
         ao.getNumbers();
-        ao.display();
+        ao.dispayOperation();
     }
 }
